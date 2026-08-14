@@ -1,0 +1,69 @@
+{
+  "lm_code": "PD-M-119",
+  "lm_version": 1,
+  "language": "en",
+  "type": "pd",
+  "name": "Breathless",
+  "topic": "Aplastic Anemia",
+  "area": "Blood & Lymphoreticular System",
+  "image": "./images/PD-M-119_en.png",
+  "source": {
+    "management": [
+      {
+        "name": "Transfuse Irradiated Blood Products \t",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": -1
+      },
+      {
+        "name": "Bone Marrow Transplantation",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": 0
+      },
+      {
+        "name": "Recombinant Erythropoietin",
+        "outcome": "bad",
+        "score_performed": 0,
+        "score_not_performed": 1
+      },
+      {
+        "name": "Prophylactic Antibiotics",
+        "outcome": "bad",
+        "score_performed": 0,
+        "score_not_performed": 1
+      }
+    ],
+    "investigations": [
+      {
+        "name": "Full Blood Count ",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": -1
+      },
+      {
+        "name": "Blood Picture",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": 0
+      },
+      {
+        "name": "Bone Marrow Aspiration, Biopsy and Cytogenetics",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": -1
+      },
+      {
+        "name": "HLA Typing",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": -1
+      }
+    ]
+  },
+  "maximum_score": 8,
+  "minimum_score": -4,
+  "core_specialties": [
+    "Pediatrics"
+  ]
+}

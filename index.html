@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Odyssey Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Base clinical styling for injected HTML */
+        .clinical-content p { margin-bottom: 1rem; line-height: 1.6; }
+        .clinical-content h1 { font-size: 1.5rem; font-weight: bold; margin-top: 1.5rem; margin-bottom: 1rem; color: #0f172a; }
+        .clinical-content img { max-width: 100%; border-radius: 8px; margin: 1.5rem auto; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .custom-button { background-color: #0b1e36; color: white; transition: background-color 0.2s; }
+        .custom-button:hover { background-color: #1a365d; }
+    </style>
+</head>
+<body class="bg-[#faf9f6] text-slate-800 font-sans antialiased pb-20">
+    
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center space-x-3 md:space-x-4">
+            
+            <!-- Clinical Odyssey Logo Placeholder -->
+            <!-- Replace the src URL with your local image path (e.g., "./images/odc-logo.png") when ready -->
+            <!-- <img src="/home/hp/Documents/COD_files/connectod-clinical-odyssey-portal/images/co-logo-header.jpg" alt="Clinical Odyssey" class="h-7 md:h-8 object-contain"> -->
+            
+            <!-- Subtle Divider -->
+            <!-- <span class="text-gray-300 font-light text-lg md:text-xl">|</span> -->
+            
+            <!-- ConnectOD Logo Placeholder -->
+            <!-- Replace the src URL with your local image path (e.g., "./images/connectod-logo.png") when ready -->
+            <img src="/images/COD_logo.png" alt="ConnectOD" class="h-7 md:h-8 object-contain">
+            
+        </div>
+        
+    </nav>
+
+    <!-- Main Content Container -->
+    <main id="app-container" class="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-sm border border-gray-100 rounded-lg">
+        <!-- Dynamic content injected here by JavaScript -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>

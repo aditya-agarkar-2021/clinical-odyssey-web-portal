@@ -1,0 +1,75 @@
+{
+  "lm_code": "PD-M-310",
+  "lm_version": 1,
+  "language": "en",
+  "type": "pd",
+  "name": "Gut Reaction",
+  "topic": "Irritable Bowel Syndrome",
+  "area": "Gastrointestinal System",
+  "image": "./images/PD-M-310_en.png",
+  "source": {
+    "management": [
+      {
+        "name": "Lifestyle and dietary modification advice",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": -1
+      },
+      {
+        "name": "Loperamide as needed",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": 0
+      },
+      {
+        "name": "Routine probiotics",
+        "outcome": "bad",
+        "score_performed": 0,
+        "score_not_performed": 1
+      },
+      {
+        "name": "Low-dose tricyclic antidepressant",
+        "outcome": "bad",
+        "score_performed": -1,
+        "score_not_performed": 1
+      }
+    ],
+    "history_html": "<p>A 34-year-old woman presents to your office with an 8-month history of recurrent, crampy lower abdominal pain, bloating, and frequent loose stools. She reports that the pain is often relieved after a bowel movement. Her symptoms are exacerbated by stress, particularly during busy periods at her demanding job as a marketing executive. She experiences 3 to 5 bowel movements daily, which she describes as loose and watery, often accompanied by a sense of urgency. She denies any nocturnal diarrhea, weight loss, fever, or blood in her stool. She has tried eliminating dairy and spicy foods on her own with minimal improvement. Her past medical history is significant for generalized anxiety disorder, for which she is not currently on medication. She has no surgical history. She does not smoke, and drinks alcohol socially on weekends. Initial laboratory studies ordered by her primary care physician are as follows:</p><p><br></p><p>WBC: 7,500/mm³ (4,500-11,000)</p><p>Hemoglobin: 13.5 g/dL (12.0-16.0)</p><p>Hematocrit: 40% (36-46)</p><p>Platelets: 250,000/mm³ (150,000-400,000)</p><p>Na⁺: 140 mEq/L (136-145)</p><p>K⁺: 4.1 mEq/L (3.5-5.1)</p><p>Cl⁻: 102 mEq/L (98-107)</p><p>HCO₃⁻: 25 mEq/L (22-29)</p><p>BUN: 15 mg/dL (7-20)</p><p>Creatinine: 0.8 mg/dL (0.6-1.1)</p><p>Glucose: 90 mg/dL (70-99)</p><p><img src=\"images/PD-M-310_en.png\"></p>",
+    "investigations": [
+      {
+        "html": "<p>Hemoglobin: 13.7 g/dL (12.0-16.0)</p><p>Hematocrit: 41% (36-46)</p><p>WBC count: 7,800/mm³ (4,500-11,000)</p><p>Platelets: 260,000/mm³ (150,000-400,000)</p><p>All results are within normal limits, ruling out anemia or significant leukocytosis.</p>",
+        "name": "Complete blood count",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": -1
+      },
+      {
+        "html": "<p>Tissue transglutaminase (tTG) IgA: &lt;4.0 U/mL (Negative: &lt;4.0)</p><p>Total serum IgA: 250 mg/dL (70-400)</p><p>The results are negative, making celiac disease unlikely.</p>",
+        "name": "Celiac serology",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": -1
+      },
+      {
+        "html": "<p>Result: 35 µg/g (Normal: &lt;50)</p><p>This result indicates an absence of significant intestinal inflammation, making inflammatory bowel disease highly improbable.</p>",
+        "name": "Fecal calprotectin",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": 0
+      },
+      {
+        "html": "<p>The colonoscopy reveals normal appearing mucosa from the rectum to the cecum. Random biopsies of the colon show no evidence of active or chronic inflammation, crypt distortion, or increased intraepithelial lymphocytes, ruling out microscopic colitis.</p>",
+        "name": "Colonoscopy",
+        "outcome": "bad",
+        "score_performed": -1,
+        "score_not_performed": 1
+      }
+    ],
+    "explanation_html": "<h1>Diagnosis and Reasoning</h1><p>This 34-year-old woman's presentation of chronic abdominal pain, altered bowel habits, and bloating is highly characteristic of irritable bowel syndrome (IBS). The symptoms, particularly the relationship of pain to defecation and the change in stool form to looser stools, fulfill the Rome IV diagnostic criteria. The absence of alarm features such as weight loss, nocturnal symptoms, and rectal bleeding makes a serious underlying organic pathology, such as inflammatory bowel disease (IBD) or malignancy, less likely.</p><p><br></p><p>The next step in a patient with suspected IBS is to undertake a limited set of investigations to exclude common conditions that can mimic its symptoms. A complete blood count is a fundamental screening test to look for anemia or signs of inflammation, which are normal in this patient.</p><p><br></p><p>Given her diarrhea-predominant symptoms, celiac disease is an important differential. Therefore, testing with celiac serology is a crucial step in the diagnostic workup. A negative tissue transglutaminase IgA level, coupled with a normal total serum IgA, makes celiac disease highly unlikely.</p><p><br></p><p>Another important consideration in a patient with chronic diarrhea is IBD. While a colonoscopy could be performed, a less invasive and highly useful screening test is fecal calprotectin. This test is a sensitive marker for intestinal inflammation. A normal fecal calprotectin level in this patient significantly lowers the probability of IBD, making an invasive procedure like a colonoscopy unnecessary at this point.</p><p><br></p><p>Colonoscopy is therefore not indicated. In a patient younger than 45 years with typical IBS symptoms, no alarm features, and negative serologic and fecal marker tests, a colonoscopy is of very low yield. It is an invasive, costly procedure that carries a small but real risk of complications and is unlikely to change the diagnosis or management plan.</p><p><br></p><p>With a positive diagnosis of IBS with diarrhea (IBS-D) established, the focus turns to initial management. The cornerstone of management is patient education and reassurance, coupled with first-line lifestyle and dietary modification advice. This involves discussing the nature of IBS as a disorder of gut-brain interaction, exploring symptom triggers such as stress and diet, and providing guidance on regular meals and physical activity. Loperamide, an anti-diarrheal agent, is an appropriate first-line pharmacological therapy to be used as needed for symptom control of troublesome diarrhea and urgency.</p><p><br></p><p>A low-dose tricyclic antidepressant is not a first-line therapy. These agents, also known as neuromodulators, are typically reserved for patients who have failed initial conservative measures or those with a significant pain component or comorbid depression. Starting it now would be premature. While some probiotics may be effective for global symptoms in IBS, evidence is inconsistent across different species and strains. Guidelines do not strongly endorse their routine use as a primary medical intervention, making them an irrelevant choice at this initial management stage compared to foundational education and targeted symptom control.</p><h1>Discussion</h1><p>Irritable bowel syndrome (IBS) is a common, chronic disorder of gut-brain interaction, affecting 5%–10% of the global population. It is more prevalent in women and in individuals under 50 years of age. IBS is characterized by recurrent abdominal pain associated with defecation and a change in bowel habit. </p><p><br></p><p>The pathophysiology of IBS is complex and multifactorial, involving a combination of altered gut motility, visceral hypersensitivity (an increased sensitivity to pain from the gut), gut-brain axis dysregulation, intestinal microbiota alterations, low-grade mucosal immune activation, and increased intestinal permeability. Genetic predisposition, psychosocial factors like stress and anxiety, and a history of enteric infection (post-infectious IBS) can also play a role.</p><p><br></p><p>In making the diagnosis, the clinician must look for alarm symptoms (e.g., unexplained weight loss, rectal bleeding, anemia) that would suggest an alternative organic diagnosis. If no such symptoms are found, one may diagnose IBS based on clinical symptom criteria, such as the Rome IV criteria:</p><p><br></p><ol><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Recurrent abdominal pain ≥ 1 day a week, and at least 2 of:</li><li data-list=\"bullet\" class=\"ql-indent-1\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Pain changes with defacation (may get better or worse)</li><li data-list=\"bullet\" class=\"ql-indent-1\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Change in stool frequency</li><li data-list=\"bullet\" class=\"ql-indent-1\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Change in stool form</li></ol><p><br></p><p>IBS is subtyped based on the predominant stool pattern using the Bristol Stool Form Scale: IBS with constipation (IBS-C), IBS with diarrhea (IBS-D), IBS with mixed bowel habits (IBS-M), and IBS unclassified (IBS-U). This subtyping helps guide therapeutic choices.</p><p><br></p><p>The diagnostic strategy for IBS has shifted from one of exclusion, which involves extensive and often unnecessary testing, to a positive diagnosis. A positive diagnosis is made based on characteristic symptoms after a limited, targeted workup to rule out key mimickers. In a patient with typical IBS-D symptoms, this usually includes a complete blood count, C-reactive protein, and serology for celiac disease. In selected patients, fecal calprotectin can be used as a non-invasive marker to rule out inflammatory bowel disease, avoiding the need for colonoscopy in low-risk individuals.</p><p><br></p><p>Management of IBS is aimed at improving symptoms and quality of life and should be individualized. The approach is typically multimodal and stepwise. Initial management focuses on patient education, reassurance, and establishing a strong therapeutic relationship. Lifestyle modifications, including regular physical activity and stress management techniques, are beneficial. Dietary therapy is a cornerstone of management. First-line advice includes having regular meals and moderating intake of insoluble fiber, caffeine, alcohol, and fatty foods. For patients who do not respond, a trial of a diet low in fermentable oligosaccharides, disaccharides, monosaccharides, and polyols (low FODMAP diet) under the guidance of a trained dietitian can be effective.</p><p><br></p><p>Pharmacotherapy is directed at the predominant symptoms. Options for IBS-D include antidiarrheals (loperamide), 5-HT₃ antagonists (alosetron), and mixed opioid receptor agents (eluxadoline). For IBS-C, laxatives (polyethylene glycol) and secretagogues (e.g., linaclotide, lubiprostone) are used. Antispasmodics and peppermint oil can be used for abdominal pain and bloating. For patients with moderate to severe symptoms that are refractory to initial therapies, centrally acting gut-brain neuromodulators, such as low-dose tricyclic antidepressants (e.g., amitriptyline) or selective serotonin reuptake inhibitors (SSRIs), are effective. Psychological therapies, such as cognitive-behavioral therapy and gut-directed hypnotherapy, have a strong evidence base and are recommended for patients with refractory symptoms or significant psychosocial comorbidity.</p><h1>Take Home Messages</h1><ol><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>IBS is a clinical diagnosis based on characteristic symptom patterns (Rome IV criteria) after excluding alarm features. Extensive investigation is usually not required.</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>A limited, targeted workup to rule out mimickers in IBS-D should include at least a complete blood count and celiac serology; fecal calprotectin can be a valuable tool to non-invasively assess for intestinal inflammation.</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Initial management should be multimodal, focusing on education, lifestyle and dietary advice, and targeted pharmacotherapy for the predominant symptom.</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Recognizing and addressing the role of the gut-brain axis, including stress and anxiety, is crucial for comprehensive and effective management.</li></ol><h1>References</h1><ol><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>ALTOMARE A, DI ROSA C, IMPERIA E, et al. Diarrhea Predominant-Irritable Bowel Syndrome (IBS-D): Effects of Different Nutritional Patterns on Intestinal Dysbiosis and Symptoms. Nutrients [online] 2021 Apr, 13(5):1506 [viewed 02 October 2025] Available from: doi:10.3390/nu13051506</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>GALICA AN, GALICA R, DUMITRAȘCU DL. Diet, Fibers, and Probiotics for Irritable Bowel Syndrome. J Med Life [online] 2022 Feb, 15(2):174-179 [viewed 02 October 2025] Available from: doi:10.25122/jml-2022-0028</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>HUANG KY, WANG FY, LV M, et al. Irritable Bowel Syndrome: Epidemiology, Overlap Disorders, Pathophysiology and Treatment. World J Gastroenterol [online] 2023 Jul, 29(26):4120-4135 [viewed 02 October 2025] Available from: doi:10.3748/wjg.v29.i26.4120</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>LACY BE, PIMENTEL M, BRENNER DM, et al. ACG Clinical Guideline: Management of Irritable Bowel Syndrome. Am J Gastroenterol [online] 2021 Jan, 116(1):17-44 [viewed 02 October 2025] Available from: doi:10.14309/ajg.0000000000001036</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>MAYER EA, RYU HJ, BHATT RR. The Neurobiology of Irritable Bowel Syndrome. Mol Psychiatry [online] 2023 Feb, 28(4):1451-1465 [viewed 02 October 2025] Available from: doi:10.1038/s41380-023-01972-w</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>SCHMULSON MJ, DROSSMAN DA. What Is New in Rome IV J Neurogastroenterol Motil [online] 2017 Apr 1, 23(2):151-163 [viewed 06 October 2025] Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5383110</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>STAUDACHER HM, BLACK CJ, TEASDALE SB, et al. Irritable Bowel Syndrome and Mental Health Comorbidity – Approach to Multidisciplinary Management. Nat Rev Gastroenterol Hepatol [online] 2023 Jun [viewed 02 October 2025] Available from: doi:10.1038/s41575-023-00794-z</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>VASANT DH, PAINE PA, BLACK CJ, et al. British Society of Gastroenterology Guidelines on the Management of Irritable Bowel Syndrome. Gut [online] 2021 Apr, 70(7):1214-1240 [viewed 02 October 2025] Available from: doi:10.1136/gutjnl-2021-324598</li></ol>"
+  },
+  "maximum_score": 8,
+  "minimum_score": -5,
+  "core_specialties": [
+    "Medicine"
+  ]
+}

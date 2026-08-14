@@ -1,0 +1,75 @@
+{
+  "lm_code": "PD-D-005",
+  "lm_version": 1,
+  "language": "en",
+  "type": "pd",
+  "name": "Sore Subject",
+  "topic": "Aphthous Stomatitis",
+  "area": "Immune System",
+  "image": "./images/PD-D-005_en.png",
+  "source": {
+    "history_html": "<p>A 22-year-old female graduate student presents to the clinic with extremely painful mouth sores for the last two weeks. She has a one-year history of smaller, recurrent oral ulcers. These typically occur every one to two months and resolve within 7-10 days. However, the current episode is her most severe. The large, deep ulcers make it difficult to eat or speak, which has resulted in a 5-pound weight loss. She notes a tingling sensation at the sites for about a day before the ulcers appeared. Her family history is positive for her mother and sister having “canker sores.” She denies any genital ulcers, eye pain or redness, skin rashes, joint pain, diarrhea, or fevers. She is a lifelong non-smoker and drinks alcohol occasionally. Initial laboratory studies are as follows:</p><p><br></p><p>WBC: 7,500/mm<sup>3</sup> (4,500-11,000)</p><p>Hb: 13.5 g/dL (12.0-15.5)</p><p>Platelets: 280,000/mm<sup>3</sup> (150,000-450,000)</p><p>ESR: 25 mm/hr (0-20)</p><p>CRP: 1.2 mg/dL (&lt;1.0)</p><p><img src=\"images/PD-M-005_en.png\"></p><p><br></p>",
+    "investigations": [
+      {
+        "html": "<p>Complete blood count: within normal limits</p><p>Ferritin: 60 ng/mL (15-150)</p><p>Serum folate: 10 ng/mL (&gt;5.4)</p><p>Vitamin B<sub>12</sub>: 550 pg/mL (232-1245)</p>",
+        "name": "CBC, ferritin, folate, vitamin B₁₂",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": -1
+      },
+      {
+        "html": "<p>Antinuclear antibody (ANA) and antineutrophil cytoplasmic antibody (ANCA) screens are negative.</p>",
+        "name": "Autoantibody panel (ANA, ANCA)",
+        "outcome": "bad",
+        "score_performed": 0,
+        "score_not_performed": 1
+      },
+      {
+        "html": "<p>Polymerase chain reaction is negative for Herpes Simplex Virus 1 and 2.</p>",
+        "name": "Viral swab for HSV PCR",
+        "outcome": "bad",
+        "score_performed": 0,
+        "score_not_performed": 1
+      },
+      {
+        "html": "<p>Histopathology reveals a nonspecific ulcer covered by a fibrinopurulent membrane with an underlying dense, mixed inflammatory cell infiltrate composed primarily of lymphocytes and neutrophils. There is no evidence of vasculitis, granulomas, viral inclusions, or malignancy.</p>",
+        "name": "Biopsy of oral ulcer",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": 0
+      }
+    ],
+    "management": [
+      {
+        "name": "High-potency topical corticosteroids",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": -1
+      },
+      {
+        "name": "Oral amoxicillin",
+        "outcome": "bad",
+        "score_performed": -1,
+        "score_not_performed": 1
+      },
+      {
+        "name": "Oral acyclovir",
+        "outcome": "bad",
+        "score_performed": -1,
+        "score_not_performed": 1
+      },
+      {
+        "name": "Short course of oral prednisone",
+        "outcome": "good",
+        "score_performed": 1,
+        "score_not_performed": 0
+      }
+    ],
+    "explanation_html": "<h1>Diagnosis and reasoning</h1><p>This 22-year-old woman presents with a debilitating flare of painful oral ulcers, consistent with recurrent aphthous stomatitis (RAS). The key features are the recurrent nature of the ulcers, the characteristic appearance of a gray-white pseudomembrane with an erythematous halo, and their location on non-keratinized oral mucosa. The large size (&gt;1 cm), depth, and severity of symptoms in this episode are indicative of major RAS, also known as Sutton's disease. Given the severity and impact on her quality of life, a thorough evaluation is warranted to confirm the diagnosis and exclude important mimics.</p><p><br></p><p>The differential diagnosis for recurrent oral ulceration is broad and includes systemic autoimmune or autoinflammatory diseases like Behçet's disease and Crohn's disease; hematinic deficiencies; celiac disease; viral infections, particularly herpes simplex virus (HSV); and, rarely, immunobullous diseases or malignancy. The patient's history lacks any features suggesting systemic involvement—such as genital ulcers, ocular inflammation, skin lesions, or gastrointestinal symptoms—making Behçet's disease or inflammatory bowel disease less likely, though not entirely excluded at presentation. Her physical exam reinforces this, showing isolated oral findings.</p><p><br></p><p>The initial workup should focus on common and treatable underlying causes. Screening for nutritional deficiencies with a complete blood count (CBC), ferritin, folate, and vitamin B₁₂ levels is a crucial first step, as deficiencies in these are known triggers for aphthosis. The normal results in this patient help narrow the diagnosis to idiopathic RAS. A biopsy of a persistent, large ulcer is also a reasonable step in such a severe presentation to definitively exclude other pathologies like pemphigus, mucous membrane pemphigoid, or squamous cell carcinoma. The biopsy findings of a non-specific inflammatory ulcer are classic for RAS. A viral swab for HSV is not indicated; the clinical picture of large, non-vesicular ulcers on non-keratinized mucosa is inconsistent with herpetic stomatitis, which typically presents with vesicles on keratinized surfaces. Similarly, a broad autoantibody panel is a low-yield test in the absence of any other signs or symptoms of systemic rheumatologic disease.</p><p><br></p><p>Management of this severe flare requires potent anti-inflammatory therapy. High-potency topical corticosteroids (e.g., clobetasol gel) are first-line treatment and should be initiated immediately to reduce local inflammation, pain, and healing time. Given the severity of her symptoms, significant odynophagia, and weight loss, a short course of oral prednisone is also highly appropriate to rapidly gain control of the flare and provide symptomatic relief. Treatment with antibiotics or antivirals is inappropriate as RAS is an immune-mediated condition, not a primary bacterial or viral infection.</p><h1>Discussion</h1><p>Recurrent aphthous stomatitis (RAS), or canker sores, is the most common chronic oral mucosal disease, affecting up to 25% of the general population. Its etiology is not fully understood but is thought to involve a T-cell-mediated immune dysregulation, often influenced by genetic predisposition, local trauma, stress, and hormonal changes. Certain HLA haplotypes have been associated with the condition. The underlying pathophysiology involves an exaggerated local inflammatory response to an unknown trigger.</p><p><br></p><p>RAS is clinically classified into three main subtypes. Minor RAS is the most common form (70-85% of cases), characterized by 1-5 round or ovoid ulcers that are less than 10 mm in diameter. They affect non-keratinized mucosa and heal within 7-14 days without scarring. Major RAS (Sutton's disease or periadenitis mucosa necrotica recurrens) is a more severe form (10-15% of cases), featuring ulcers larger than 10 mm that can last for up to six weeks and often heal with scarring. These ulcers can appear on any oral mucosal surface. Herpetiform RAS (5-10% of cases) is characterized by multiple (10-100) small, 1-3 mm ulcers that can coalesce into larger, irregular plaques. Despite the name, it is not associated with the herpes virus.</p><p><br></p><p>While RAS is typically idiopathic, it can be a manifestation of various systemic conditions. A thorough history and review of systems is critical to screen for diseases such as Behçet's disease (which also features genital ulcers and uveitis), inflammatory bowel disease (Crohn's disease, ulcerative colitis), celiac disease, cyclic neutropenia, HIV infection, and PFAPA syndrome (Periodic Fever, Aphthous stomatitis, Pharyngitis, Adenitis), particularly in children. A diagnostic workup is often indicated, especially in severe or atypical cases, to rule out underlying hematinic deficiencies (iron, vitamin B₁₂, folate) which are known to be associated with RAS.</p><p><br></p><p>The diagnosis of RAS is primarily clinical, based on a history of recurrent, painful, self-healing oral ulcers and a physical examination confirming the characteristic ulcer appearance. Biopsy is reserved for atypical cases to exclude other diagnoses. There is no curative treatment; management is aimed at reducing pain, shortening healing time, and decreasing the frequency of recurrence. Treatment strategy is tiered based on disease severity. Mild or minor RAS may be managed with topical anesthetics (e.g., lidocaine), protective barrier agents, or over-the-counter preparations. For more significant or major RAS, high-potency topical corticosteroids (e.g., fluocinonide, clobetasol) are the cornerstone of therapy. For severe, debilitating disease refractory to topical treatment, systemic therapy is considered. A short course of oral corticosteroids (e.g., prednisone) is effective for controlling acute flares. For long-term prophylaxis in recalcitrant cases, options include colchicine, dapsone, thalidomide, apremilast, or other immunomodulators, though their use is limited by potential side effects. Prevention also includes identifying and avoiding individual triggers, such as specific foods or using toothpaste free of sodium lauryl sulfate.</p><h1>Take home messages</h1><ol><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Recurrent aphthous stomatitis is a clinical diagnosis, but investigation for nutritional deficiencies and underlying systemic diseases is warranted in severe or atypical presentations.</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>The three subtypes—minor, major, and herpetiform—are distinguished by the size, number, and healing characteristics of the ulcers.</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>High-potency topical corticosteroids are the first-line treatment for moderate to severe RAS.</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>A short course of systemic corticosteroids is an effective option for controlling severe, painful flares that impair function.</li></ol><h1>References</h1><ol><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>KOBEROVÁ R, MERGLOVÁ V, RADOCHOVÁ V. Recurrent Aphthous Stomatitis in Children: A Practical Guideline for Paediatric Practitioners. Acta Medica (Hradec Králové) [online] 2020 Dec, 63(4):145-149 [viewed 29 October 2025] Available from: doi:10.14712/18059694.2020.56</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>LAU CB, SMITH GP. Recurrent aphthous stomatitis: A comprehensive review and recommendations on therapeutic options. Dermatol Ther [online] 2022 Jun, 35(6):e15500 [viewed 29 October 2025] Available from: doi:10.1111/dth.15500</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>LIU H, TAN L, FU G, CHEN L, TAN H. Efficacy of Topical Intervention for Recurrent Aphthous Stomatitis: A Network Meta-Analysis. Medicina (Kaunas) [online] 2022 Jun, 58(6):771 [viewed 29 October 2025] Available from: doi:10.3390/medicina58060771</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>MANFREDINI M, GUIDA S, GIOVANI M, LIPPOLIS N, SPINAS E, FARNETANI F, DATTOLA A, DI MATTEO E, PELLACANI G, GIANNETTI L. Recurrent Aphthous Stomatitis: Treatment and Management. Dermatol Pract Concept [online] 2021 Sep, 11(4):e2021099 [viewed 29 October 2025] Available from: doi:10.5826/dpc.1104a99</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>MILIA E, SOTGIU MA, SPANO G, FILIGHEDDU E, GALLUSI G, CAMPANELLA V. Recurrent aphthous stomatitis (RAS): guideline for differential diagnosis and management. Eur J Paediatr Dent [online] 2022 Mar, 23(1):73-78 [viewed 29 October 2025] Available from: doi:10.23804/ejpd.2022.23.01.14</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>PEÑUELAS LEAL R, BAGAN L, GRAU ECHEVARRÍA A, PEÑUELAS RUIZ JA, ZARAGOZA NINET V, SÁNCHEZ CARAZO JL, ET AL. Treatment of recurrent aphthous stomatitis with oral roflumilast, a multicenter observational study. Int J Dermatol [online] 2024, 63:e390-e396 [viewed 29 October 2025] Available from: doi:10.1111/ijd.17478</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>TAN SL, HO CY, TEY HL. Successful treatment of a case of recalcitrant recurrent aphthous stomatitis using steroid-embedded dissolving microneedles. Indian J Dermatol Venereol Leprol [online] 2022 Jun, 88:553-555 [viewed 29 October 2025] Available from: doi:10.25259/IJDVL_521_2021</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>WANG A, MANTHIRAM K, DEDEOGLU F, LICAMELI GR. Periodic fever, aphthous stomatitis, pharyngitis, and adenitis (PFAPA) syndrome: A review. World J Otorhinolaryngol Head Neck Surg [online] 2021 Jun, 7:166–173 [viewed 29 October 2025] Available from: doi:10.1016/j.wjorl.2021.05.004</li></ol>"
+  },
+  "maximum_score": 8,
+  "minimum_score": -4,
+  "core_specialties": [
+    "Dentistry"
+  ]
+}
