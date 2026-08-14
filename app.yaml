@@ -1,0 +1,20 @@
+runtime: python39 # We use the Python runtime just as a basic environment to serve static files
+
+handlers:
+# Serve the images directory
+- url: /images
+  static_dir: images
+
+# Serve the json-files directory
+- url: /json-files
+  static_dir: json-files
+
+# Serve the main JavaScript file
+- url: /app.js
+  static_files: app.js
+  upload: app.js
+
+# Serve the main HTML file for all other routes
+- url: /.*
+  static_files: index.html
+  upload: index.html
