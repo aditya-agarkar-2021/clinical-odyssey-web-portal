@@ -42,7 +42,7 @@ function renderHistory() {
         <div class="mb-8 border-b-2 border-gray-100 pb-5">
             <h1 class="text-3xl font-extrabold text-[#0b1e36] mb-2">${caseStudyData.name}</h1>
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                <span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">${caseStudyData.topic}</span>
+                <span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">${caseStudyData.hint}</span>
                 <span class="text-xs text-gray-400 font-medium italic">Powered by <span> <img src="/images/co-logo-header.jpg" alt="Clinical Odyssey" class="h-7 md:h-8 object-contain"></span></span>
                 
             </div>
@@ -250,16 +250,22 @@ function renderResults() {
             ${caseStudyData.source.explanation_html}
         </div>
 
-        ${otherCasesHtml}
+         <div class="clinical-content border-t border-gray-200 pt-8"></div>
 
         <!-- The WhatsApp Hook CTA -->
-        <div class="p-6 bg-[#f0fdf4] border-2 border-green-500 rounded-xl text-center shadow-md mb-10">
-            <h3 class="text-2xl font-bold text-green-800 mb-2">Want full access to the library?</h3>
-            <p class="text-green-700 mb-6">Connect your practise to unlock hundreds of such interactive case studies via ConnectOD.</p>
-            <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20claim%20my%201-Month%20Free%20Clinical%20Odyssey%20access." target="_blank" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
-                Claim 1-Month FREE Access on WhatsApp
-            </a>
-        </div>
+<div class="p-6 bg-[#f0fdf4] border-2 border-green-500 rounded-xl text-center shadow-md mb-10">
+    <h3 class="text-2xl font-bold text-green-800 mb-2">Want full access to the library?</h3>
+    <p class="text-green-700 mb-6">Connect your practise to unlock hundreds of such interactive case studies via ConnectOD.</p>
+    
+    <div class="flex flex-col items-center">
+        <a href="https://wa.me/918068988778?text=Hi,%20I'd%20like%20to%20claim%20my%203-Month%20Free%20Clinical%20Odyssey%20access." target="_blank" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
+            Claim 3-Month FREE Access on WhatsApp
+        </a>
+        <span class="text-xs sm:text-sm text-green-800 mt-3 font-medium">
+            (Can be extended up to 1 year based on your 90-day usage)
+        </span>
+    </div>
+</div>
     `;
     
     appContainer.appendChild(section);

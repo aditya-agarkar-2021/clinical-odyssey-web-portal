@@ -5,6 +5,7 @@
   "type": "pd",
   "name": "Buildup",
   "topic": "Calcium Pyrophosphate Deposition Disease",
+  "hint": "Look for calcification around the knee and menisci.",
   "area": "Musculoskeletal System",
   "image": "./images/PD-M-067_en.png",
   "source": {

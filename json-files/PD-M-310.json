@@ -5,6 +5,7 @@
   "type": "pd",
   "name": "Gut Reaction",
   "topic": "Irritable Bowel Syndrome",
+  "hint": "Consider bowel pain relieved by defecation, without alarm features.",
   "area": "Gastrointestinal System",
   "image": "./images/PD-M-310_en.png",
   "source": {

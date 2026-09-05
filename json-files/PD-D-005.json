@@ -5,6 +5,7 @@
   "type": "pd",
   "name": "Sore Subject",
   "topic": "Aphthous Stomatitis",
+  "hint": "Think recurrent ulcers on non-keratinized oral mucosa.",
   "area": "Immune System",
   "image": "./images/PD-D-005_en.png",
   "source": {

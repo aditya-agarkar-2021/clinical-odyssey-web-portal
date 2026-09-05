@@ -5,6 +5,7 @@
   "type": "pd",
   "name": "Breathless",
   "topic": "Aplastic Anemia",
+  "hint": "Focus on pancytopenia and bone marrow function.",
   "area": "Blood & Lymphoreticular System",
   "image": "./images/PD-M-119_en.png",
   "source": {
