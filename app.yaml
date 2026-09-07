@@ -1,3 +1,4 @@
+service: connectod-clinical-odyssey-web-portal
 runtime: python312 # We use the Python runtime just as a basic environment to serve static files
 
 handlers:
