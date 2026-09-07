@@ -1,4 +1,4 @@
-runtime: python39 # We use the Python runtime just as a basic environment to serve static files
+runtime: python312 # We use the Python runtime just as a basic environment to serve static files
 
 handlers:
 # Serve the images directory
