@@ -258,7 +258,7 @@ function renderResults() {
     <p class="text-green-700 mb-6">Connect your practise to unlock hundreds of such interactive case studies via ConnectOD.</p>
     
     <div class="flex flex-col items-center">
-        <a href="https://wa.me/918068988778?text=Hi,%20I'd%20like%20to%20claim%20my%201-Month%20Free%20Clinical%20Odyssey%20access." target="_blank" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
+        <a href="https://wa.me/message/QSTTGSWIF7LED1" target="_blank" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
             Claim 1-Month FREE Access on WhatsApp
         </a>
         <span class="text-xs sm:text-sm text-green-800 mt-3 font-medium">
