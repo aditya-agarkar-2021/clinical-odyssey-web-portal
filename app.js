@@ -3,6 +3,7 @@ let caseStudyData = null;
 let currentStep = 1;
 let currentCaseFile = '';
 let userChoices = { investigations: {}, management: {} };
+let currentExplanationHtml = '';
 
 // Define your library of cases here
 const caseDirectory = [
@@ -38,13 +39,11 @@ function renderHistory() {
     const section = document.createElement('div');
     section.id = 'step-1-container';
     section.innerHTML = `
-        <!-- NEW: Dynamic Title and Powered By text -->
         <div class="mb-8 border-b-2 border-gray-100 pb-5">
             <h1 class="text-3xl font-extrabold text-[#0b1e36] mb-2">${caseStudyData.name}</h1>
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
                 <span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">${caseStudyData.hint}</span>
                 <span class="text-xs text-gray-400 font-medium italic">Powered by <span> <img src="/images/co-logo-header.jpg" alt="Clinical Odyssey" class="h-7 md:h-8 object-contain"></span></span>
-                
             </div>
         </div>
  
@@ -123,7 +122,7 @@ function renderInvestigations() {
 window.performInvestigation = function(index) {
     userChoices.investigations[index] = true;
     renderInvestigations(); 
-}
+};
 
 function renderManagement() {
     const section = document.createElement('div');
@@ -165,6 +164,75 @@ window.submitCase = function() {
         userChoices.management[index] = checkbox.checked;
     });
     nextStep(4);
+};
+
+// =========================================================
+// HELPER FUNCTIONS: Explanation & Table Generation
+// =========================================================
+
+function stripLeadingHeading(html) {
+    if (!html) return '';
+    return html.replace(/^\s*<h1[^>]*>.*?<\/h1>\s*/is, '');
+}
+
+function getExplanationPreview(html, maxLength = 160) {
+    if (!html) return '';
+
+    const cleanHtml = stripLeadingHeading(html);
+    const plainText = cleanHtml
+        .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, ' ')
+        .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, ' ')
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/&nbsp;/gi, ' ')
+        .replace(/&amp;/gi, '&')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+    if (!plainText) return '';
+    return plainText.length > maxLength ? `${plainText.slice(0, maxLength).trim()}...` : plainText;
+}
+
+window.toggleCaseExplanation = function() {
+    const content = document.getElementById('case-explanation-content');
+    const button = document.getElementById('toggle-explanation-btn');
+
+    if (!content || !button) return;
+
+    const isExpanded = content.dataset.expanded === 'true';
+    const fallbackText = '<div class="text-sm text-slate-600 italic leading-relaxed">Diagnosis and reasoning coming soon.</div>';
+    
+    const previewText = getExplanationPreview(currentExplanationHtml);
+    const fullBody = stripLeadingHeading(currentExplanationHtml);
+
+    content.innerHTML = isExpanded
+        ? `<div class="text-sm text-slate-600 italic leading-relaxed">${previewText || 'Diagnosis and reasoning coming soon.'}</div>`
+        : (fullBody || fallbackText);
+
+    content.dataset.expanded = String(!isExpanded);
+    button.textContent = isExpanded ? 'View more' : 'Hide';
+};
+
+// Shared helper to build scoring rows for investigations & management
+function buildResultRows(items, userChoicesMap) {
+    let scoreDelta = 0;
+    let html = '';
+
+    items.forEach((item, index) => {
+        const performed = userChoicesMap[index];
+        scoreDelta += performed ? item.score_performed : item.score_not_performed;
+        const isCorrect = (performed && item.outcome === 'good') || (!performed && item.outcome === 'bad');
+        const correctColor = isCorrect ? 'text-green-600' : 'text-red-600';
+
+        html += `
+            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                <td class="py-3 pr-4">${item.name}</td>
+                <td class="py-3">${performed ? 'Performed' : 'Not performed'}</td>
+                <td class="py-3 font-bold ${correctColor}">${isCorrect ? 'Correct' : 'Incorrect'}</td>
+            </tr>
+        `;
+    });
+
+    return { scoreDelta, html };
 }
 
 function renderResults() {
@@ -172,7 +240,12 @@ function renderResults() {
     section.id = 'step-4-container';
     section.className = 'mt-12 pt-12 border-t-2 border-dashed border-gray-200';
 
-    let finalScore = 0;
+    // Calculate score & render table using helper function
+    const invResults = buildResultRows(caseStudyData.source.investigations, userChoices.investigations);
+    const mgmtResults = buildResultRows(caseStudyData.source.management, userChoices.management);
+
+    let finalScore = invResults.scoreDelta + mgmtResults.scoreDelta;
+
     let tableHtml = `
         <table class="w-full text-left text-sm mt-6 mb-10 border-collapse">
             <thead>
@@ -183,39 +256,14 @@ function renderResults() {
                 </tr>
             </thead>
             <tbody>
+                ${invResults.html}
+                ${mgmtResults.html}
+            </tbody>
+        </table>
     `;
 
-    caseStudyData.source.investigations.forEach((inv, i) => {
-        const performed = userChoices.investigations[i];
-        finalScore += performed ? inv.score_performed : inv.score_not_performed;
-        const isCorrect = (performed && inv.outcome === 'good') || (!performed && inv.outcome === 'bad');
-        const correctColor = isCorrect ? 'text-green-600' : 'text-red-600';
-        tableHtml += `
-            <tr class="border-b border-gray-100 hover:bg-gray-50">
-                <td class="py-3 pr-4">${inv.name}</td>
-                <td class="py-3">${performed ? 'Performed' : 'Not performed'}</td>
-                <td class="py-3 font-bold ${correctColor}">${isCorrect ? 'Correct' : 'Incorrect'}</td>
-            </tr>
-        `;
-    });
-
-    caseStudyData.source.management.forEach((action, i) => {
-        const performed = userChoices.management[i];
-        finalScore += performed ? action.score_performed : action.score_not_performed;
-        const isCorrect = (performed && action.outcome === 'good') || (!performed && action.outcome === 'bad');
-        const correctColor = isCorrect ? 'text-green-600' : 'text-red-600';
-        tableHtml += `
-            <tr class="border-b border-gray-100 hover:bg-gray-50">
-                <td class="py-3 pr-4">${action.name}</td>
-                <td class="py-3">${performed ? 'Performed' : 'Not performed'}</td>
-                <td class="py-3 font-bold ${correctColor}">${isCorrect ? 'Correct' : 'Incorrect'}</td>
-            </tr>
-        `;
-    });
-    tableHtml += `</tbody></table>`;
-
-    if(finalScore > caseStudyData.maximum_score) finalScore = caseStudyData.maximum_score;
-    if(finalScore < caseStudyData.minimum_score) finalScore = caseStudyData.minimum_score;
+    if (finalScore > caseStudyData.maximum_score) finalScore = caseStudyData.maximum_score;
+    if (finalScore < caseStudyData.minimum_score) finalScore = caseStudyData.minimum_score;
     const percentage = Math.round((finalScore / caseStudyData.maximum_score) * 100);
 
     // Build the dynamic case selector menu
@@ -237,6 +285,9 @@ function renderResults() {
     });
     otherCasesHtml += `</div></div>`;
 
+    currentExplanationHtml = caseStudyData.source.explanation_html || '';
+    const explanationPreview = getExplanationPreview(currentExplanationHtml);
+
     section.innerHTML = `
         <div class="text-center mb-10">
             <h3 class="text-lg font-semibold text-slate-600 uppercase tracking-widest">Your Score</h3>
@@ -247,25 +298,36 @@ function renderResults() {
         ${tableHtml}
 
         <div class="clinical-content border-t border-gray-200 pt-8">
-            ${caseStudyData.source.explanation_html}
+            <h3 class="text-xl font-bold text-[#0b1e36] mb-3">Diagnosis and reasoning</h3>
+
+            <div id="case-explanation-content" data-expanded="false" class="rounded-lg border border-gray-200 bg-slate-50 px-4 py-3">
+                <div class="text-sm text-slate-600 italic leading-relaxed">
+                    ${explanationPreview || 'Diagnosis and reasoning coming soon.'}
+                </div>
+            </div>
+            <div class="mt-4 flex justify-center">
+                <button type="button" id="toggle-explanation-btn" onclick="toggleCaseExplanation()" class="custom-button px-5 py-2 rounded shadow text-sm font-semibold">
+                    View more
+                </button>
+            </div>
         </div>
 
-         <div class="clinical-content border-t border-gray-200 pt-8"></div>
+        ${otherCasesHtml}
 
         <!-- The WhatsApp Hook CTA -->
-<div class="p-6 bg-[#f0fdf4] border-2 border-green-500 rounded-xl text-center shadow-md mb-10">
-    <h3 class="text-2xl font-bold text-green-800 mb-2">Want full access to the library?</h3>
-    <p class="text-green-700 mb-6">Connect your practise to unlock hundreds of such interactive case studies via ConnectOD.</p>
-    
-    <div class="flex flex-col items-center">
-        <a href="https://wa.me/message/QSTTGSWIF7LED1" target="_blank" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
-            Claim 1-Month FREE Access on WhatsApp
-        </a>
-        <span class="text-xs sm:text-sm text-green-800 mt-3 font-medium">
-            (Can be extended up to 1 year based on your 90-day usage)
-        </span>
-    </div>
-</div>
+        <div class="p-6 bg-[#f0fdf4] border-2 border-green-500 rounded-xl text-center shadow-md mb-10">
+            <h3 class="text-2xl font-bold text-green-800 mb-2">Want full access to the library?</h3>
+            <p class="text-green-700 mb-6">Connect your practise to unlock hundreds of such interactive case studies via ConnectOD.</p>
+
+            <div class="flex flex-col items-center">
+                <a href="https://wa.me/message/QSTTGSWIF7LED1" target="_blank" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
+                    Claim 1-Month FREE Access on WhatsApp
+                </a>
+                <span class="text-xs sm:text-sm text-green-800 mt-3 font-medium">
+                    (Can be extended up to 3-months based on your 30 days usage)
+                </span>
+            </div>
+        </div>
     `;
     
     appContainer.appendChild(section);
