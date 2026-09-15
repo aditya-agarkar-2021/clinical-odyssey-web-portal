@@ -209,7 +209,7 @@ window.toggleCaseExplanation = function() {
         : (fullBody || fallbackText);
 
     content.dataset.expanded = String(!isExpanded);
-    button.textContent = isExpanded ? 'View more' : 'Hide';
+    button.textContent = isExpanded ? 'Click here to read full analysis' : 'Hide';
 };
 
 // Shared helper to build scoring rows for investigations & management
@@ -307,7 +307,7 @@ function renderResults() {
             </div>
             <div class="mt-4 flex justify-center">
                 <button type="button" id="toggle-explanation-btn" onclick="toggleCaseExplanation()" class="custom-button px-5 py-2 rounded shadow text-sm font-semibold">
-                    View more
+                    Click here to read full analysis
                 </button>
             </div>
         </div>
@@ -324,7 +324,7 @@ function renderResults() {
                     Claim 1-Month FREE Access on WhatsApp
                 </a>
                 <span class="text-xs sm:text-sm text-green-800 mt-3 font-medium">
-                    (Can be extended up to 3-months based on your 30 days usage)
+                    (Can be extended up to 3-months based on your 1-month usage)
                 </span>
             </div>
         </div>
